@@ -1,0 +1,4 @@
+mixin image(img, imgClass, imgWidth, imgHeight)
+    picture
+        source(type="image/webp", srcset="img/" + img + ".webp 1x, img/" + img + "@2x.webp 2x, img/" + img + "@3x.webp 3x, img/" + img + "@4x.webp 4x")
+        img(src="img/" + img + ".jpg", srcset="img/" + img + "@2x.jpg 2x, img/" + img + "@3x.jpg 3x, img/" + img + "@4x.jpg 4x", class=imgClass, width=imgWidth, height=imgHeight)

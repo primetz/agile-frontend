@@ -1,0 +1,8 @@
+include svg
+
+mixin social-buttons(prefix, ...items)
+    ul(class=prefix+"-social-list")
+        each item in items
+            li(class=prefix+"-social-list-item")
+                a(href=item.iconHref target="_blank" class=prefix+"-social-list-item__link")
+                    +svgUse(item.iconName)

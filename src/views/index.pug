@@ -1,0 +1,19 @@
+extends layouts/default
+
+include helpers/mixins/image
+include helpers/mixins/svg
+include helpers/mixins/social-buttons
+
+block variables
+    - const title = "Agile frontend"
+    - const description = "Flexible web interface development"
+    - const keywords = "HTML, CSS, JavaScript, Frontend"
+
+block content
+    include ../blocks/modules/header/header
+    include ../blocks/modules/main/main
+    include ../blocks/modules/footer/footer
+
+block scripts
+    script(src="/js/main.js" defer)
+    script(src="/js/vendor.js" defer)
