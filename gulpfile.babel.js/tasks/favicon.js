@@ -3,6 +3,7 @@
 import gulp from "gulp";
 import del from "del";
 import realFavicon from "gulp-real-favicon";
+import { minify } from "html-minifier";
 import fs from "node:fs";
 
 import { paths } from "../paths";
@@ -79,7 +80,6 @@ export function favicon(done) {
 }
 
 export function injectFavicon() {
-    // console.log(JSON.parse(fs.readFileSync(paths.favicon.dataFile).version));
     return gulp.src([paths.views.public + "*.html"])
         .pipe(
             realFavicon.injectFaviconMarkups(
@@ -88,6 +88,16 @@ export function injectFavicon() {
                 ).favicon.html_code
             )
         )
+        .on('data', function(file) {
+            return file.contents = Buffer.from(
+                minify(
+                    file.contents.toString(),
+                    {
+                        collapseWhitespace: true
+                    }
+                )
+            )
+        })
         .pipe(
             gulp.dest(paths.views.public)
         );

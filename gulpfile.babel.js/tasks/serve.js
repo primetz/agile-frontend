@@ -6,6 +6,7 @@ import browserSync from "browser-sync";
 import { paths } from "../paths";
 import { views } from "./views";
 import { injectFavicon } from "./favicon";
+import { scss } from "./scss";
 
 export function serve() {
     browserSync.init({
@@ -20,5 +21,10 @@ export function serve() {
             parallel(views),
             injectFavicon
         )
+    );
+
+    watch(
+        paths.styles.watch,
+        parallel(scss)
     );
 }

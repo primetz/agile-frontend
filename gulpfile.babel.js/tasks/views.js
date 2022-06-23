@@ -5,9 +5,9 @@ import pug from "gulp-pug";
 import gulpIf from "gulp-if";
 import replace from "gulp-replace";
 import browserSync from "browser-sync";
-import { isProduction } from "../is-production";
 
 import { paths } from "../paths";
+import { isProduction } from "../is-production";
 
 export function views() {
     return src(paths.views.src)

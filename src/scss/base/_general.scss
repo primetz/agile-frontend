@@ -1,0 +1,15 @@
+@import "../helpers/functions";
+@import "../helpers/mixins";
+@import "../helpers/variables";
+
+
+body {
+    font-size: $body-font-size;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 $side-fields;
+}
