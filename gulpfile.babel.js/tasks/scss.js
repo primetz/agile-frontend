@@ -12,7 +12,6 @@ import sourceMaps from "gulp-sourcemaps";
 import plumber from "gulp-plumber";
 import browserSync from "browser-sync";
 import debug from "gulp-debug";
-import del from "del";
 
 import { paths } from "../paths";
 import { isProduction } from "../is-production";
@@ -20,8 +19,6 @@ import { isProduction } from "../is-production";
 const sass = gulpSass(nodeSass);
 
 export function scss() {
-    del.sync(paths.styles.public);
-
     return gulp.src(paths.styles.src)
         .pipe(
             gulpIf(

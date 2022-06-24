@@ -1,7 +1,6 @@
 "use strict";
 
 import gulp from "gulp";
-import del from "del";
 import realFavicon from "gulp-real-favicon";
 import { minify } from "html-minifier";
 import fs from "node:fs";
@@ -9,11 +8,6 @@ import fs from "node:fs";
 import { paths } from "../paths";
 
 export function favicon(done) {
-    del.sync([
-        paths.favicon.public + "*",
-        paths.favicon.dataFile
-    ]);
-
     realFavicon.generateFavicon({
         masterPicture: paths.favicon.src,
         dest: paths.favicon.public,

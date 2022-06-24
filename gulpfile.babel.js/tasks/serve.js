@@ -7,10 +7,11 @@ import { paths } from "../paths";
 import { views } from "./views";
 import { injectFavicon } from "./favicon";
 import { scss } from "./scss";
+import { sprite } from "./svg-sprite";
 
 export function serve() {
     browserSync.init({
-        server: paths.serve,
+        server: paths.public,
         notify: false,
         open: false
     });
@@ -26,5 +27,10 @@ export function serve() {
     watch(
         paths.styles.watch,
         parallel(scss)
+    );
+
+    watch(
+        paths.sprite.watch,
+        parallel(sprite)
     );
 }

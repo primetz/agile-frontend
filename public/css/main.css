@@ -187,4 +187,31 @@ body {
   margin: 0 auto;
   padding: 0 30px;
 }
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.icon-facebook {
+  font-size: 1.6rem;
+  width: 0.5em;
+}
+
+.icon-instagram {
+  font-size: 1.6rem;
+  width: 1em;
+}
+
+.icon-pinterest {
+  font-size: 1.6rem;
+  width: 0.75em;
+}
+
+.icon-twitter {
+  font-size: 1.2rem;
+  width: 1.33333em;
+}
 /*# sourceMappingURL=maps/main.css.map */

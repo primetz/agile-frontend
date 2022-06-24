@@ -1,0 +1,35 @@
+.icon-facebook,
+.icon-instagram,
+.icon-pinterest,
+.icon-twitter {
+    font-size: 16px;
+    color: #222;
+}
+
+.footer-social-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    &-item {
+        margin: 0 8px 0 0;
+        &:last-child {
+            margin: 0;
+        }
+        &__link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            &:hover {
+                .icon-facebook,
+                .icon-instagram,
+                .icon-pinterest,
+                .icon-twitter {
+                    color: #ff6347;
+                }
+            }
+        }
+    }
+}

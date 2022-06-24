@@ -21,6 +21,13 @@ export const paths = {
             "./src/scss/**/*.{scss,sass}"
         ]
     },
+    sprite: {
+        src: "./src/img/svg/*.svg",
+        scss: "../../../../src/scss/svg-template/import/",
+        template: "./src/scss/svg-template/",
+        public: "./public/img/sprite/",
+        watch: "./src/img/svg/*.svg"
+    },
     favicon: {
         src: "./src/img/favicon/favicon.svg",
         public: "./public/img/favicon/",
@@ -28,7 +35,7 @@ export const paths = {
         dataFile: "./src/img/favicon/faviconData.json"
     },
     sourceMaps: "./maps/",
-    serve: [
+    public: [
         "./public/"
     ]
 };
