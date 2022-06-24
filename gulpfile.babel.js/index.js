@@ -25,13 +25,15 @@ export const dev = series(
     parallel(serve)
 );
 
-export const prod = parallel([
+export const prod = series(
     clean,
-    views,
-    scss,
-    sprite,
-    series(
-        favicon,
-        injectFavicon
-    )
-]);
+    parallel([
+        views,
+        scss,
+        sprite,
+        series(
+            favicon,
+            injectFavicon
+        )
+    ])
+);
