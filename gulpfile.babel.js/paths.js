@@ -21,6 +21,14 @@ export const paths = {
             "./src/scss/**/*.{scss,sass}"
         ]
     },
+    images: {
+        src: [
+            "./src/img/**/*.{jpg,jpeg,png,gif,tiff}",
+            "!./src/img/favicon/*.{jpg,jpeg,png,gif,tiff}"
+        ],
+        public: "./public/img/",
+        watch: "./src/img/**/*.{jpg,jpeg,png,gif,tiff}"
+    },
     sprite: {
         src: "./src/img/svg/*.svg",
         scss: "../../../../src/scss/svg-template/import/",

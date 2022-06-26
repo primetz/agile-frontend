@@ -27,4 +27,9 @@ primetz/agile-frontend:latest
 
 #### Значения переменной ASSEMBLY_MODE
 * ```dev``` - Режим разработки (значение по умолчанию)
-* ```prod``` - Режим сборки
+* ```build``` - Режим сборки
+* ```build:html``` - Режим сборки HTML
+* ```build:css``` - Режим сборки CSS
+* ```build:images``` - Режим сборки картинок
+* ```build:svg``` - Режим сборки SVG спрайта
+* ```build:favicon``` - Режим сборки favicon

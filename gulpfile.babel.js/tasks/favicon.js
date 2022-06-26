@@ -78,7 +78,7 @@ export function injectFavicon() {
         .pipe(
             realFavicon.injectFaviconMarkups(
                 JSON.parse(
-                    fs.readFileSync(paths.favicon.dataFile)
+                    fs.readFileSync(paths.favicon.dataFile, "utf8")
                 ).favicon.html_code
             )
         )

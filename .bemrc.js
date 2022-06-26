@@ -9,7 +9,7 @@ module.exports = {
                     techs: ["pug", "scss", "js"],
                     levels: {
                         "src/blocks/modules": {
-                            default: true
+                            default: true,
                         }
                     }
                 }

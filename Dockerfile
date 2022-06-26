@@ -6,8 +6,7 @@ WORKDIR /home/node/app
 
 COPY . .
 
-RUN yarn global add browser-sync\
-    && yarn global add gulp-cli \
+RUN yarn global add gulp-cli browser-sync \
     && yarn install \
     && chown -R node:node /home/node/app
 

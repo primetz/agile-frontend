@@ -9,6 +9,7 @@ import { serve } from "./tasks/serve";
 import { smartGrid } from "./tasks/smart-grid";
 import { scss } from "./tasks/scss";
 import { sprite } from "./tasks/svg-sprite";
+import { images } from "./tasks/images";
 
 export const dev = series(
     clean,
@@ -17,6 +18,7 @@ export const dev = series(
         views,
         scss,
         sprite,
+        images,
         series(
             favicon,
             injectFavicon
@@ -31,9 +33,12 @@ export const prod = series(
         views,
         scss,
         sprite,
+        images,
         series(
             favicon,
             injectFavicon
         )
     ])
 );
+
+export { views, scss, sprite, images, favicon };
