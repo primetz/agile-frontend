@@ -9,6 +9,7 @@ import { injectFavicon } from "./favicon";
 import { scss } from "./scss";
 import { sprite } from "./svg-sprite";
 import { images } from "./images";
+import { webp } from "./webp";
 
 export function serve() {
     browserSync.init({
@@ -37,6 +38,6 @@ export function serve() {
 
     watch(
         paths.images.watch,
-        parallel(images)
+        parallel(images, webp)
     );
 }

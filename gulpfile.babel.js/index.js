@@ -10,6 +10,7 @@ import { smartGrid } from "./tasks/smart-grid";
 import { scss } from "./tasks/scss";
 import { sprite } from "./tasks/svg-sprite";
 import { images } from "./tasks/images";
+import { webp } from "./tasks/webp";
 
 export const dev = series(
     clean,
@@ -19,6 +20,7 @@ export const dev = series(
         scss,
         sprite,
         images,
+        webp,
         series(
             favicon,
             injectFavicon
@@ -34,6 +36,7 @@ export const prod = series(
         scss,
         sprite,
         images,
+        webp,
         series(
             favicon,
             injectFavicon
@@ -41,4 +44,4 @@ export const prod = series(
     ])
 );
 
-export { views, scss, sprite, images, favicon };
+export { views, scss, sprite, images, webp, favicon };

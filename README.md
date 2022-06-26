@@ -19,7 +19,7 @@ primetz/agile-frontend:latest
 
 ```shell
 docker run -t --rm \
--e ASSEMBLY_MODE=prod \
+-e ASSEMBLY_MODE=build \
 -v $(pwd)/src:/home/node/app/src \
 -v $(pwd)/public:/home/node/app/public \
 primetz/agile-frontend:latest
@@ -30,6 +30,7 @@ primetz/agile-frontend:latest
 * ```build``` - Режим сборки
 * ```build:html``` - Режим сборки HTML
 * ```build:css``` - Режим сборки CSS
-* ```build:images``` - Режим сборки картинок
+* ```build:images``` - Режим сборки картинок (jpg, jpeg, png, gif, tiff)
+* ```build:webp``` - Режим сборки картинок (webp)
 * ```build:svg``` - Режим сборки SVG спрайта
 * ```build:favicon``` - Режим сборки favicon
